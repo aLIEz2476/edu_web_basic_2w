@@ -2,6 +2,7 @@
 <html lang="jp">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta charset="UTF-8">
     <title>Fetch練習!</title>
     <!-- JQueryを import します -->
@@ -28,8 +29,8 @@
     </style>
 
     <script>
-        async function q1() {
-            const res = await fetch("http://spartacodingclub.shop/sparta_api/bike_jp")
+        function q1() {
+            fetch("http://spartacodingclub.shop/sparta_api/bike_jp")
                 .then(response => response.json()).then(data => {
                 $('#names-q1').empty()
                 let rows = data['getStationList']['row']
