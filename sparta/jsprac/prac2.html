@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fetchを始めてみよう</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        fetch("http://spartacodingclub.shop/en/global_air/osaka")
+            .then(res => res.json())
+            .then(data => {
+                let datas = data['data']['forecast'];
+                datas.forEach((a) => {
+                    console.log(a['day'], a['avg'])
+                })
+            })
+    </script>
+</head>
+
+<body>
+    Fetch練習ページ
+</body>
+
+</html>
