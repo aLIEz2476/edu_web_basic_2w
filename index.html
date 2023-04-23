@@ -28,7 +28,7 @@
     </style>
 
     <script>
-        function q1() {
+        async function q1() {
             fetch("http://spartacodingclub.shop/sparta_api/bike_jp")
                 .then(response => response.json()).then(data => {
                 $('#names-q1').empty()
