@@ -30,7 +30,10 @@
 
     <script>
         $(document).ready(function() {
-    fetch("http://spartacodingclub.shop/sparta_api/weather/tokyo").then(res => res.json()).then(data => {
+    fetch("http://spartacodingclub.shop/sparta_api/weather/tokyo").then(res => {
+        console.log(res);    
+        return res.json();
+    }).then(data => {
         console.log(data)
     })
 })
