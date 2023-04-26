@@ -29,6 +29,11 @@
     </style>
 
     <script>
+        $(document).ready(function() {
+    fetch("http://spartacodingclub.shop/sparta_api/weather/tokyo").then(res => res.json()).then(data => {
+        console.log(data)
+    })
+})
         function q1() {
             fetch("http://spartacodingclub.shop/sparta_api/bike_jp")
                 .then(response => response.json()).then(data => {
